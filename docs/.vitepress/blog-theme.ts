@@ -107,7 +107,7 @@ const blogTheme = getThemeConfig({
       repo: '127Wzc/cc-giscus',
       repoId: 'R_kgDONXwvLA',
       category: 'Announcements',
-      categoryId: 'DIC_kwDODmEcc84COVc6',
+      categoryId: 'DIC_kwDONXwvLM4CkzqF',
       inputPosition: 'top'
     },
     mobileMinify: true
