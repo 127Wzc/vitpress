@@ -1,7 +1,7 @@
-import { defineConfig } from 'vitepress'
+import { defineConfig } from "vitepress";
 
 // 导入主题的配置
-import { blogTheme } from './blog-theme'
+import { blogTheme } from "./blog-theme";
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为“/仓库名/”
@@ -16,43 +16,66 @@ export default defineConfig({
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
   // base,
-  lang: 'zh-cn',
-  title: 'cc小站',
-  description: '基于粥里有勺糖的博客主题，基于 vitepress 实现',
+  lang: "zh-cn",
+  title: "cc小站",
+  description: "基于粥里有勺糖的博客主题，基于 vitepress 实现",
   lastUpdated: true,
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
     // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ["link", { rel: "icon", href: "/favicon.ico" }],
   ],
   themeConfig: {
     // 展示 2,3 级标题在目录中
     outline: {
       level: [2, 3],
-      label: '目录'
+      label: "目录",
     },
     // 默认文案修改
-    returnToTopLabel: '回到顶部',
-    sidebarMenuLabel: '相关文章',
-    lastUpdatedText: '上次更新于',
+    returnToTopLabel: "回到顶部",
+    sidebarMenuLabel: "相关文章",
+    lastUpdatedText: "上次更新于",
 
     // 设置logo
-    logo: '/logo.png',
+    logo: "/logo.png",
     // editLink: {
     //   pattern:
     //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
     //   text: '去 GitHub 上编辑内容'
     // },
     nav: [
-      { text: '首页', link: '/' },
-      { text: '关于主题', link: '/about' }
+      { text: "首页",
+        link: "/" 
+      },
+      { 
+        text: "编程", 
+        items: [
+          { text: "Java", link: "/coding/java/" },
+          { text: "Shell", link: "/coding/shell/" },
+        ]
+      },
+      { 
+        text: "数据库", 
+        items: [
+          { text: "MySql", link: "/db/mysql/" }
+        ]
+      },
+      { 
+        text: "运维", 
+        items: [
+          { text: "Docker", link: "/ops/docker/" },
+        ]
+      },
+      { text: "关于主题", 
+        link: "/about" 
+      }
     ],
     socialLinks: [
       {
-        icon: 'github',
-        link: 'https://github.com/127Wzc/vitpress'
-      }
-    ]
-  }
-})
+        icon: "github",
+        link: "https://github.com/127Wzc/vitpress",
+      },
+    ],
+  },
+});

@@ -47,7 +47,8 @@ const blogTheme = getThemeConfig({
 
   // 文章默认作者
   author: 'cc',
-
+  // Mermaid - 图表
+  mermaid: true,
   //日期
   formatShowDate(date) {
     return new Date(date).toLocaleDateString()
