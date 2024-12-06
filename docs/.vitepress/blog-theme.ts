@@ -31,7 +31,7 @@ const blogTheme = getThemeConfig({
   footer: {
     // message 字段支持配置为HTML内容，配置多条可以配置为数组
     // message: '下面 的内容和图标都是可以修改的噢（当然本条内容也是可以隐藏的）',
-    copyright: 'MIT License | 粥里有勺糖',
+    copyright: 'MIT License | cc',
     // icpRecord: {
     //   name: '蜀ICP备19011724号',
     //   link: 'https://beian.miit.gov.cn/'
@@ -47,6 +47,11 @@ const blogTheme = getThemeConfig({
 
   // 文章默认作者
   author: 'cc',
+
+  //日期
+  formatShowDate(date) {
+    return new Date(date).toLocaleDateString()
+  },
 
   // 友链
   friend: [
@@ -101,6 +106,7 @@ const blogTheme = getThemeConfig({
     duration: 0
   },
 
+  //评论
   comment: {
     type: 'giscus',
     options: {
@@ -111,6 +117,33 @@ const blogTheme = getThemeConfig({
       inputPosition: 'top'
     },
     mobileMinify: true
+  },
+  //live2d
+  oml2d: {
+    mobileDisplay: true,
+    models: [
+      {
+        path: 'https://model.oml2d.com/mai/model.json'
+      },
+      {
+        path: 'https://model.oml2d.com/bilibili-22/index.json'
+      },
+      {
+        path: 'https://model.oml2d.com/HK416-1-normal/model.json'
+      },
+      {
+        path: 'https://model.oml2d.com/kobayaxi/model.json'
+      },
+      {
+        path: 'https://model.oml2d.com/platelet/model.json'
+      },
+      {
+        path: 'https://model.oml2d.com/rem/model.json'
+      },
+      {
+        path: 'https://model.oml2d.com/umaru/model.json'
+      }
+    ]
   }
 })
 
