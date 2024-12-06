@@ -100,6 +100,18 @@ const blogTheme = getThemeConfig({
     ],
     duration: 0
   },
+
+  comment: {
+    type: 'giscus',
+    options: {
+      repo: '127Wzc/cc-giscus',
+      repoId: 'R_kgDONXwvLA',
+      category: 'Announcements',
+      categoryId: 'DIC_kwDODmEcc84COVc6',
+      inputPosition: 'top'
+    },
+    mobileMinify: true
+  }
 })
 
 export { blogTheme }
