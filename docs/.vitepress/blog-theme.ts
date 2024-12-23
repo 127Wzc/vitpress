@@ -112,7 +112,7 @@ const blogTheme = getThemeConfig({
     type: 'giscus',
     options: {
       repo: '127Wzc/cc-giscus',
-      repoId: 'R_kgDONXwvLA',
+      repoId: process.env.VITE_GISCUS_REPO_ID || '',
       category: 'Announcements',
       categoryId: 'DIC_kwDONXwvLM4CkzqF',
       inputPosition: 'top'
