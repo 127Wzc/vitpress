@@ -1,7 +1,11 @@
 ---
 hidden: true
+readingTime: false
+date: false
+author: false
+recommend: false
 ---
-# Java 导航目录
+# Java 汇总
 
-## 目录
+## 异常系列
 * [异常汇总](./java-exception.md)

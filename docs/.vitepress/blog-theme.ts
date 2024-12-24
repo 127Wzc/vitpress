@@ -22,7 +22,7 @@ const blogTheme = getThemeConfig({
 
   // 搜索
   // 默认开启pagefind离线的全文搜索支持（如使用其它的可以设置为false）
-  // search: false,
+  // search: true,
 
   // markdown 图表支持（会增加一定的构建耗时）
   // mermaid: true
@@ -107,6 +107,17 @@ const blogTheme = getThemeConfig({
     duration: 0
   },
 
+   // 推荐文章的展示卡片
+  recommend: {
+    showSelf: true,
+    nextText: '下一页',
+    style: 'sidebar'
+  },
+   // 热门文章
+  hotArticle: {
+    pageSize: 12
+  },
+
   //评论
   comment: {
     type: 'giscus',
@@ -145,7 +156,9 @@ const blogTheme = getThemeConfig({
         path: 'https://model.oml2d.com/umaru/model.json'
       }
     ]
-  }
+  },
+
+ 
 })
 
 export { blogTheme }
