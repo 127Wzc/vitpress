@@ -1,9 +1,9 @@
 ---
 isTimeLine: true
-title: FFMPEG批量音频提取
+title: FFmpeg批量音频提取
 date: 2022-03-15
 tags:
- - ffmpeg
+ - FFmpeg
 categories:
  - 编程
 ---

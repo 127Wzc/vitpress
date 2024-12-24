@@ -1,7 +1,7 @@
 ---
 hidden: true
 ---
-# Mysql
+# Mysql 导航目录
 
 ## 目录
 * [MySQL子查询OrderBy失效](./mysql-orderByInvalidation.md)

@@ -1,7 +1,7 @@
 ---
 hidden: true
 ---
-# Java 相关
+# Java 导航目录
 
 ## 目录
-* [迭代ArrayList或者HashMap出现ConcurrentModificationException](./java-concurrentModificationException.md)
+* [异常汇总](./java-exception.md)

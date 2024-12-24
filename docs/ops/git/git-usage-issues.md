@@ -1,7 +1,6 @@
 ---
 isTimeLine: true
 title: Git使用问题汇总
-sticky: 10
 date: 2024-12-20
 tag: 
  - Git

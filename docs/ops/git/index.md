@@ -1,7 +1,7 @@
 ---
 hidden: true
 ---
-# Git目录
+# Git 导航目录
 
 ## 目录
 * [Git基础命令](./git-basic-instructions.md)

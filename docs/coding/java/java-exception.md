@@ -1,13 +1,13 @@
 ---
 isTimeLine: true
-title: 迭代ArrayList或者HashMap出现ConcurrentModificationException
-sticky: 10
+title: 异常汇总
 date: 2022-05-24
 tag: 
  - Java
 ---
+# 异常汇总
 
-# 迭代ArrayList或者HashMap出现ConcurrentModificationException
+## 迭代ArrayList或者HashMap出现ConcurrentModificationException
 
 当我们迭代一个ArrayList或者HashMap时，如果尝试对集合做一些修改操作（例如删除元素），可能会抛出`java.util.ConcurrentModificationException`的异常。
 
@@ -49,7 +49,7 @@ Exception in thread "main" java.util.ConcurrentModificationException
 	at java.util.ArrayList$Itr.next(ArrayList.java:859)
 	at demo.beanTest.main.main(main.java:12)
 ```
-## 异常原因
+### 异常原因
 
 ArrayList的父类AbstarctList中有一个域`modCount`，每次对集合进行修改（增添元素，删除元素……）时都会`modCount++`
 
@@ -168,9 +168,9 @@ public void clear() {
 
 从上面的代码可以看出，ArrayList的add、remove、clear方法都会造成modCount的改变。迭代过程中如何调用这些方法就会造成modCount的增加，使迭代类中expectedModCount和modCount不相等。
 
-## 异常的解决
+### 异常的解决
 
-### 1. 单线程环境
+#### 1. 单线程环境
 
 好，现在我们已经基本了解了异常的发送原因了。接下来我们来解决它。\
 我很任性，我就是想在迭代集合时删除集合的元素，怎么办？
@@ -192,7 +192,7 @@ while(iter.hasNext()){
 1.只能进行remove操作，add、clear等Itr中没有。\
 2.而且只适用单线程环境。
 
-### 2. 多线程环境
+#### 2. 多线程环境
 
 在多线程环境下，我们再次试验下上面的代码
 ```
@@ -349,7 +349,7 @@ public class Test2 {
 CopyOnWriteArrayList也是一个线程安全的ArrayList，其实现原理在于，每次add,remove等所有的操作都是重新创建一个新的数组，再把引用指向新的数组。\
 由于我用CopyOnWriteArrayList少，这里就不多讨论了，想了解可以看：[Java并发编程：并发容器之CopyOnWriteArrayList](https://link.jianshu.com?t=http://www.cnblogs.com/dolphin0520/p/3938914.html)
 
-## 深入理解异常—fail-fast机制
+### 深入理解异常—fail-fast机制
 
 到这里，我们似乎已经理解完这个异常的产生缘由了。\
 但是，仔细思考，还是会有几点疑惑：
