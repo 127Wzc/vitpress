@@ -53,3 +53,17 @@ bfg文档地址: https://rtyley.github.io/bfg-repo-cleaner
 # 推送所有标签到目标仓库
 8）git push target --tags
 :::
+
+
+:::details 针对文件清理
+```bash
+# 下载BFG工具的jar包
+1）在本地代码仓库上一级目录，下载jar包：curl -O https://repo1.maven.org/maven2/com/madgag/bfg/1.14.0/bfg-1.14.0.jar
+
+# 注意delete-files会把最新一次附带上该文件 需要自己先在最新的提交上收到删除对应的文件再执行(记得备份)
+# 使用BFG工具清理大于64MB的blob
+2）java -jar bfg-1.14.0.jar --delete-files init-minio.zip xxx\.git\
+# 清理引用日志并进行强制垃圾回收
+3）git reflog expire --expire=now --all && git gc --prune=now --aggressive
+# 检查即可
+:::

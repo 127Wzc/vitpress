@@ -43,6 +43,11 @@ git remote -v
 git remote add origin-2 https://github.com/user/repo.git
 ```
 
+### 重置关联仓库地址
+```sh
+git remote set-url origin https://github.com/user/repo.git
+```
+
 ## git全局配置
 
 ### 设置全局用户名/邮箱
