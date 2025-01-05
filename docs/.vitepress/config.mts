@@ -66,6 +66,7 @@ export default defineConfig({
         items: [
           { text: "Docker", link: "/ops/docker/" },
           { text: "Git", link: "/ops/git/" },
+          { text: "Linux", link: "/ops/linux/" },
         ]
       },
       { text: "关于主题", 

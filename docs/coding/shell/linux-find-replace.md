@@ -6,7 +6,8 @@ tags:
  - Shell
  - Ubuntu
 categories:
- - 编程
+ - Linux
+ - Shell
 ---
 
 #示例
