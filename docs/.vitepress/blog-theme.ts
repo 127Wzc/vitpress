@@ -79,7 +79,7 @@ const blogTheme = getThemeConfig({
       { type: 'text', content: '👇QQ👇---👇 微信 👇' },
       {
         type: 'image',
-        src: 'https://pic.cc127.us.kg/blog/qrcode.png'
+        src: 'https://pic.cc127.me/blog/qrcode.png'
       },
       {
         type: 'text',
