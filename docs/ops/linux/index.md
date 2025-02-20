@@ -1,6 +1,5 @@
 ---
-hidden: true
-readingTime: false
+publish: false
 date: false
 author: false
 recommend: false

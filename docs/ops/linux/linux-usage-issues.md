@@ -1,6 +1,7 @@
 ---
 isTimeLine: true
 title: Linux使用问题汇总
+description: '最近更新⏰ 2025-01-05：shell命令出现`bash: /dev/fd/63:`'
 date: 2025-01-05
 tag: 
  - Linux

@@ -1,6 +1,7 @@
 ---
 isTimeLine: true
 title: Docker使用问题汇总
+description: 最近更新⏰ 2025-02-10：减小并控制Docker日志大小
 date: 2025-02-10
 tag: 
  - Docker

@@ -1,6 +1,7 @@
 ---
 isTimeLine: true
 title: Docker镜像问题汇总
+description: 最近更新⏰ 2024-10-20：更新构建镜像过程中`RUN`下载的文件丢失
 date: 2024-10-20
 tag: 
  - Docker

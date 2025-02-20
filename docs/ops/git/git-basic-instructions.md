@@ -1,6 +1,7 @@
 ---
 isTimeLine: true
 title: Git基础命令
+description: 最近更新⏰ 2024-12-20：git stash
 sticky: 10
 date: 2024-12-20
 tag: 

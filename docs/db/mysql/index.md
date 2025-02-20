@@ -1,9 +1,8 @@
 ---
-hidden: true
+publish: false
 readingTime: false
 date: false
 author: false
-recommend: false
 ---
 # Mysql 导航目录
 

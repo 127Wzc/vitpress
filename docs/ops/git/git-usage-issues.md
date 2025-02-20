@@ -1,6 +1,7 @@
 ---
 isTimeLine: true
 title: Git使用问题汇总
+description: 最近更新⏰ 2024-12-20：大文件清理(bfg)
 date: 2024-12-20
 tag: 
  - Git
