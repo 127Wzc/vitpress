@@ -8,4 +8,4 @@ author: false
 
 ## 问题系列
 * [MySQL子查询OrderBy失效](./mysql-orderByInvalidation.md)
-* [MySQL布尔类型存储](./mysql-boolean-data-storage.md)
+* [MySQL不同类型字段查询/联表时精度丢失](./mysql-query-accuracy-loss-of-different-types.md)
