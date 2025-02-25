@@ -1,7 +1,7 @@
 ---
 isTimeLine: true
 title: Git使用问题汇总
-description: 最近更新⏰ 2024-12-20：大文件清理(bfg)
+description: 最近更新⏰ 2024-02-25：多Host密钥配置
 date: 2024-12-20
 tag: 
  - Git
@@ -67,4 +67,22 @@ bfg文档地址: https://rtyley.github.io/bfg-repo-cleaner
 # 清理引用日志并进行强制垃圾回收
 3）git reflog expire --expire=now --all && git gc --prune=now --aggressive
 # 检查即可
+```bash
 :::
+
+## 多Host密钥配置
+> 例如，将密钥 A 用于 example.com，将密钥 B 用于 stevenharman.net。
+
+简化的 ~/.ssh/config 可能看起来像这样：
+```bash
+Host example.com
+  IdentityFile ~/.ssh/github
+
+Host stevenharman.net
+  IdentityFile ~/.ssh/gitlab
+```
+:::tip 扩展同Host多账号配置
+https://stevenharman.net/configure-ssh-keys-for-multiple-github-accounts
+:::
+
+

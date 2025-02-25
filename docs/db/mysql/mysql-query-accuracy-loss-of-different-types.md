@@ -17,17 +17,17 @@ SELECT  1756551086153924631 = '1756551086153924600'
 -- 结果为 1  丢失了最后两位
 ```
 ## 问题原因
-Mysql在比较字符串和数值时，会将两者都转换成双精度浮点型数进行比较，因为精度丢失(我这边测试隐式转换有效长度是17,18位之后的会被丢失)，导致比较结果为true.
+MySQL在比较字符串和数值时，会将两者都转换成双精度浮点型数进行比较，因为精度丢失(我这边测试隐式转换有效长度是17,18位之后的会被丢失)，导致比较结果为true.
 ## 示例场景
 比如下面order_info表有一个存储为VARCHAR类型的ID字段，值为 `1671041482747756548`。order_detail表中order_id为BIGINT与order_info关联。
 ### 表结构示例
 ```sql
--- 表1：使用varchar存储ID
+-- 表1：使用VARCHAR存储ID
 CREATE TABLE order_info (
 id VARCHAR(20) PRIMARY KEY,
 order_name VARCHAR(100)
 );
--- 表2：使用bigint存储ID
+-- 表2：使用BIGINT存储ID
 CREATE TABLE order_detail (
 id BIGINT PRIMARY KEY,
 order_id BIGINT,
@@ -52,7 +52,7 @@ product_name VARCHAR(100)
 ### 查询匹配丢精度
 #### 错误查询
 ```sql
--- 错误的查询方式（varchar不加引号）
+-- 错误的查询方式（VARCHAR不加引号）
 SELECT FROM order_info WHERE id = 1671041482747756548;
 ```
 结果：
@@ -114,11 +114,11 @@ LEFT JOIN order_detail b ON CAST(a.id AS BIGINT) = b.order_id;
 
 ## 解决方案：
 
-1.统一字段类型，用bigint就都用bigint，用varchar都用varchar。这样不仅规范，而且可以避免两表联查时索引失效
+1.统一字段类型，用BIGINT就都用BIGINT，用VARCHAR都用VARCHAR。这样不仅规范，而且可以避免两表联查时索引失效
 
-2、查询语句的条件中严格按照字段的类型写查询值。避免mysql进行隐式转换。也同时可以避免索引失效
+2、查询语句的条件中严格按照字段的类型写查询值。避免MySQL进行隐式转换。也同时可以避免索引失效
 
-3、使用mysql提供的CAST()或者CONVERT()函数。
+3、使用MySQL提供的CAST()或者CONVERT()函数。
 :::warning
 - 类型不一致可能导致索引失效
 - 隐式转换会影响查询性能
