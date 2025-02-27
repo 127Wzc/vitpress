@@ -69,6 +69,12 @@ export default defineConfig({
           { text: "Linux", link: "/ops/linux/" },
         ]
       },
+      { 
+        text: "线上作品", 
+        items: [
+          { text: "个人图床", link: "https://imgbed.cc127.me" }
+        ]
+      },
       { text: "关于主题", 
         link: "/about" 
       }
