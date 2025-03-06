@@ -72,8 +72,8 @@ export default defineConfig({
       { 
         text: "线上作品", 
         items: [
-          { text: "个人图床", link: "https://imgbed.cc127.me" },
-          { text: "表情包制作文档", link: "https://meme.cc127.me/docs" }
+          { text: "个人图床", link: "https://imgbed.clannad.me" },
+          { text: "表情包制作文档", link: "https://meme.clannad.me/docs" }
         ]
       },
       { text: "关于主题", 
