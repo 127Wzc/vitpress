@@ -138,7 +138,7 @@ const blogTheme = getThemeConfig({
         path: 'https://model.hacxy.cn/mai/model.json'
       },
       {
-        path: 'https://model.hacxy.cn/ilibili-22/index.json'
+        path: 'https://model.hacxy.cn/bilibili-22/index.json'
       },
       {
         path: 'https://model.hacxy.cn/HK416-1-normal/model.json'
