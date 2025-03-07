@@ -73,39 +73,39 @@ const blogTheme = getThemeConfig({
   ],
 
   // 公告
-  popover: {
-    title: '公告',
-    body: [
-      { type: 'text', content: '👇QQ👇---👇 微信 👇' },
-      {
-        type: 'image',
-        src: 'https://pic.clannad.me/blog/qrcode.png'
-      },
-      {
-        type: 'text',
-        content: '欢迎大家加群&私信交流'
-      },
-      // {
-      //   type: 'text',
-      //   content: '文章首/文尾有群二维码',
-      //   style: 'padding-top:0'
-      // },
-      // {
-      //   type: 'button',
-      //   content: '作者博客',
-      //   link: 'https://sugarat.top'
-      // },
-      // {
-      //   type: 'button',
-      //   content: '加群交流',
-      //   props: {
-      //     type: 'success'
-      //   },
-      //   link: 'https://theme.sugarat.top/group.html',
-      // }
-    ],
-    duration: 0
-  },
+  // popover: {
+  //   title: '公告',
+  //   body: [
+  //     { type: 'text', content: '👇QQ👇---👇 微信 👇' },
+  //     {
+  //       type: 'image',
+  //       src: 'https://pic.clannad.me/blog/qrcode.png'
+  //     },
+  //     {
+  //       type: 'text',
+  //       content: '欢迎大家加群&私信交流'
+  //     },
+  //     // {
+  //     //   type: 'text',
+  //     //   content: '文章首/文尾有群二维码',
+  //     //   style: 'padding-top:0'
+  //     // },
+  //     // {
+  //     //   type: 'button',
+  //     //   content: '作者博客',
+  //     //   link: 'https://sugarat.top'
+  //     // },
+  //     // {
+  //     //   type: 'button',
+  //     //   content: '加群交流',
+  //     //   props: {
+  //     //     type: 'success'
+  //     //   },
+  //     //   link: 'https://theme.sugarat.top/group.html',
+  //     // }
+  //   ],
+  //   duration: 0
+  // },
 
    // 推荐文章的展示卡片
   recommend: {
@@ -135,25 +135,25 @@ const blogTheme = getThemeConfig({
     mobileDisplay: true,
     models: [
       {
-        path: 'https://model.oml2d.com/mai/model.json'
+        path: 'https://model.hacxy.cn/mai/model.json'
       },
       {
-        path: 'https://model.oml2d.com/bilibili-22/index.json'
+        path: 'https://model.hacxy.cn/ilibili-22/index.json'
       },
       {
-        path: 'https://model.oml2d.com/HK416-1-normal/model.json'
+        path: 'https://model.hacxy.cn/HK416-1-normal/model.json'
       },
       {
-        path: 'https://model.oml2d.com/kobayaxi/model.json'
+        path: 'https://model.hacxy.cn/kobayaxi/model.json'
       },
       {
-        path: 'https://model.oml2d.com/platelet/model.json'
+        path: 'https://model.hacxy.cn/platelet/model.json'
       },
       {
-        path: 'https://model.oml2d.com/rem/model.json'
+        path: 'https://model.hacxy.cn/rem/model.json'
       },
       {
-        path: 'https://model.oml2d.com/umaru/model.json'
+        path: 'https://model.hacxy.cn/umaru/model.json'
       }
     ]
   },
