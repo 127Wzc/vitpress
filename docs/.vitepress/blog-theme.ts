@@ -1,37 +1,34 @@
 // 主题独有配置
 import { getThemeConfig } from '@sugarat/theme/node'
 
-// 开启RSS支持（RSS配置）
-// import type { Theme } from '@sugarat/theme'
+//开启RSS支持（RSS配置）
+import type { Theme } from '@sugarat/theme'
 
-// const baseUrl = 'https://sugarat.top'
-// const RSS: Theme.RSSOptions = {
-//   title: '粥里有勺糖',
-//   baseUrl,
-//   copyright: 'Copyright (c) 2018-present, 粥里有勺糖',
-//   description: '你的指尖,拥有改变世界的力量（大前端相关技术分享）',
-//   language: 'zh-cn',
-//   image: 'https://img.cdn.sugarat.top/mdImg/MTY3NDk5NTE2NzAzMA==674995167030',
-//   favicon: 'https://sugarat.top/favicon.ico',
-// }
+const baseUrl = 'https://sugarat.top'
+const RSS: Theme.RSSOptions = {
+  title: '小c',
+  baseUrl,
+  copyright: 'Copyright (c) 2024-present, 小c',
+  description: '君子终日乾乾，夕惕若厉，无咎',
+  language: 'zh-cn',
+  image: 'https://blog.clannad.me/logo.png',
+  favicon: 'https://blog.clannad.me/favicon.ico',
+}
 
 // 所有配置项，详见文档: https://theme.sugarat.top/
 const blogTheme = getThemeConfig({
   // 开启RSS支持
-  // RSS,
+  RSS,
 
   // 搜索
   // 默认开启pagefind离线的全文搜索支持（如使用其它的可以设置为false）
   // search: true,
 
-  // markdown 图表支持（会增加一定的构建耗时）
-  // mermaid: true
-
   // 页脚
   footer: {
     // message 字段支持配置为HTML内容，配置多条可以配置为数组
     // message: '下面 的内容和图标都是可以修改的噢（当然本条内容也是可以隐藏的）',
-    copyright: 'MIT License | CC',
+    copyright: 'MIT License | 小c',
     // icpRecord: {
     //   name: '蜀ICP备19011724号',
     //   link: 'https://beian.miit.gov.cn/'
@@ -46,7 +43,7 @@ const blogTheme = getThemeConfig({
   themeColor: 'el-blue',
 
   // 文章默认作者
-  author: 'CC',
+  author: '小c',
   // Mermaid - 图表
   mermaid: true,
   //日期

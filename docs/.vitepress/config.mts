@@ -17,7 +17,7 @@ export default defineConfig({
   extends: blogTheme,
   // base,
   lang: "zh-cn",
-  title: "CC",
+  title: "小c",
   description: "基于粥里有勺糖的博客主题，基于 vitepress 实现",
   lastUpdated: true,
   // 详见：https://vitepress.dev/zh/reference/site-config#head
