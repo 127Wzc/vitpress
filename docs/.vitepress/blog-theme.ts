@@ -4,7 +4,7 @@ import { getThemeConfig } from '@sugarat/theme/node'
 //开启RSS支持（RSS配置）
 import type { Theme } from '@sugarat/theme'
 
-const baseUrl = 'https://sugarat.top'
+const baseUrl = 'https://blog.clannad.me'
 const RSS: Theme.RSSOptions = {
   title: '小c',
   baseUrl,

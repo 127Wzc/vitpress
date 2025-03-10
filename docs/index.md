@@ -2,7 +2,7 @@
 layout: home
 # 首页部分元素定制
 blog:
- name: "小c's Blog"
+ name: "小c"
  motto: 君子终日乾乾，夕惕若厉，无咎
  inspiring:
   - 千万不要因为走得太久，而忘记了我们为什么出发
