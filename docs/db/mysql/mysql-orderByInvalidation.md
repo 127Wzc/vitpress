@@ -26,7 +26,7 @@ A "table" (and subquery in the FROM clause too) is - according to the SQL standa
 ### 1.Order By从子查询中移至到外层查询
 
 ### 2.采用 row_number()  over + partition by去排序分组，可以保留数据完整信息
-``` mysql [mysql]
+``` sql
 SELECT  *,row_number() over (PARTITION BY sex ORDER BY id DESC ) AS od
  FROM people;
 ```
@@ -43,7 +43,7 @@ SELECT  *,row_number() over (PARTITION BY sex ORDER BY id DESC ) AS od
 
 网上都说Mysql5.7，在子查询的ORDER BY子句后面，必须加上LIMIT 10000000，实测不加LIMIT 结果确实会有问题
 **未加Limit，没有排序效果**
-``` mysql [mysql]
+``` sql
 SELECT * FROM (
   SELECT 
     tccs.application_id,
@@ -74,7 +74,7 @@ LIMIT 0, 10;
 
 
 **加上limit 10000000后跟预期正常**
-``` mysql [mysql]
+``` sql
 SELECT * FROM (
   SELECT 
     tccs.application_id,
