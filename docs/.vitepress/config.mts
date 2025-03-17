@@ -70,9 +70,10 @@ export default defineConfig({
         ]
       },
       { 
-        text: "线上作品", 
+        text: "个人服务", 
         items: [
           { text: "个人图床", link: "https://imgbed.clannad.me" },
+          { text: "open-webui", link: "https://open-webui.clannad.me" },
           { text: "表情包制作文档", link: "https://meme.clannad.me/docs" },
           { text: "服务监控面板", link: "https://uk.clannad.me/status/web" }
         ]
