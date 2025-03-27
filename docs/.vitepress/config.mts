@@ -75,6 +75,7 @@ export default defineConfig({
           { text: "个人图床", link: "https://imgbed.clannad.me" },
           { text: "open-webui", link: "https://open-webui.clannad.me" },
           { text: "一起看电影", link: "https://tv.clannad.me" },
+          { text: "临时邮箱", link: "https://mail.clannad.me" },
           { text: "表情包制作文档", link: "https://meme.clannad.me/docs" },
           { text: "服务监控面板", link: "https://uk.clannad.me/status/web" }
         ]
