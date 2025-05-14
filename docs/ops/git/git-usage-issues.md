@@ -53,6 +53,7 @@ bfg文档地址: https://rtyley.github.io/bfg-repo-cleaner
 7）git push target --all
 # 推送所有标签到目标仓库
 8）git push target --tags
+```
 :::
 
 
@@ -67,7 +68,7 @@ bfg文档地址: https://rtyley.github.io/bfg-repo-cleaner
 # 清理引用日志并进行强制垃圾回收
 3）git reflog expire --expire=now --all && git gc --prune=now --aggressive
 # 检查即可
-```bash
+```
 :::
 
 ## 多Host密钥配置
