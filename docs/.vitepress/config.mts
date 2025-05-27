@@ -99,10 +99,7 @@ export default defineConfig({
         
         // 可选配置
         apply: 'all',        // 在开发和构建环境都启用
-        async: true,         // 异步加载脚本
-        autoTrack: true,     // 自动跟踪页面浏览
-        spa: true,           // 使用SPA模式
-        cache: true,         // 启用缓存
+        async: true         // 异步加载脚本
       })
       // ... 其他 Vite 插件 ...
     ]
