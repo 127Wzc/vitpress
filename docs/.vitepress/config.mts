@@ -1,10 +1,11 @@
 import { defineConfig } from "vitepress";
+import { UmamiPlugin } from './plugins/umami'
 
 // 导入主题的配置
 import { blogTheme } from "./blog-theme";
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
-// 通常需要修改 base 路径，通常为“/仓库名/”
+// 通常需要修改 base 路径，通常为"/仓库名/"
 // 如果项目名已经为 name.github.io 域名，则不需要修改！
 // const base = process.env.GITHUB_ACTIONS === 'true'
 //   ? '/vitepress-blog-sugar-template/'
@@ -91,4 +92,19 @@ export default defineConfig({
       },
     ],
   },
+  vite: {
+    plugins: [
+      UmamiPlugin({
+        websiteId: process.env.VITE_UMAMI_WEBSITE_ID || '', // 替换为您的 Umami 网站 ID
+        hostUrl: process.env.VITE_UMAMI_HOST_URL || '',          // 替换为您的 Umami 实例地址
+        
+        // 可选配置
+        apply: 'all',         // 在开发和构建环境都启用
+        importMode: 'async',  // 异步加载脚本
+        disableInDev: false,  // 开发环境也启用统计
+      }),
+      
+      // ... 其他 Vite 插件 ...
+    ]
+  }
 });
