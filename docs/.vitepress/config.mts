@@ -1,6 +1,5 @@
 import { defineConfig } from "vitepress";
-import { UmamiPlugin } from './plugins/umami'
-
+import { UmamiPlugin } from 'vitepress-plugin-umami'
 // 导入主题的配置
 import { blogTheme } from "./blog-theme";
 
@@ -96,14 +95,15 @@ export default defineConfig({
     plugins: [
       UmamiPlugin({
         websiteId: process.env.VITE_UMAMI_WEBSITE_ID || '', // 替换为您的 Umami 网站 ID
-        hostUrl: process.env.VITE_UMAMI_HOST_URL || '',          // 替换为您的 Umami 实例地址
+        hostUrl: process.env.VITE_UMAMI_HOST_URL || '', // 替换为您的 Umami 网站js
         
         // 可选配置
-        apply: 'all',         // 在开发和构建环境都启用
-        importMode: 'async',  // 异步加载脚本
-        disableInDev: false,  // 开发环境也启用统计
-      }),
-      
+        apply: 'all',        // 在开发和构建环境都启用
+        async: true,         // 异步加载脚本
+        autoTrack: true,     // 自动跟踪页面浏览
+        spa: true,           // 使用SPA模式
+        cache: true,         // 启用缓存
+      })
       // ... 其他 Vite 插件 ...
     ]
   }

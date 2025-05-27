@@ -1,0 +1,38 @@
+{
+  "name": "vitepress-plugin-umami",
+  "version": "0.1.0",
+  "description": "VitePress plugin for Umami analytics",
+  "author": "粥里有勺糖",
+  "license": "MIT",
+  "homepage": "https://github.com/wangzc/vitpress/tree/master/package/vitepress-plugin-umami",
+  "keywords": [
+    "vitepress",
+    "plugin",
+    "umami",
+    "analytics",
+    "website analytics"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vitepress": "^1"
+  },
+  "devDependencies": {
+    "vite": "^5",
+    "vitepress": "^1.6.3"
+  },
+  "scripts": {
+    "dev": "npx tsup src/index.ts --dts --watch --format esm,cjs --external vitepress",
+    "build": "npx tsup src/index.ts --dts --format esm,cjs --external vitepress --silent"
+  }
+} 
