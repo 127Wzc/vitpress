@@ -59,7 +59,8 @@ export default defineConfig({
       { 
         text: "数据库", 
         items: [
-          { text: "MySql", link: "/db/mysql/" }
+          { text: "MySql", link: "/db/mysql/" },
+          { text: "PostgreSQL", link: "/db/postgresql/" }
         ]
       },
       { 
