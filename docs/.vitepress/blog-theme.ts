@@ -4,15 +4,17 @@ import { getThemeConfig } from '@sugarat/theme/node'
 //开启RSS支持（RSS配置）
 import type { Theme } from '@sugarat/theme'
 
-const baseUrl = 'https://blog.clannad.me'
+// 域名环境变量
+const DOMAIN = process.env.VITE_DOMAIN || 'clannad.me';
+const baseUrl = `https://blog.${DOMAIN}`
 const RSS: Theme.RSSOptions = {
   title: '小c',
   baseUrl,
   copyright: 'Copyright (c) 2024-present, 小c',
   description: '君子终日乾乾，夕惕若厉，无咎',
   language: 'zh-cn',
-  image: 'https://blog.clannad.me/logo.png',
-  favicon: 'https://blog.clannad.me/favicon.ico',
+  image: `${baseUrl}/logo.png`,
+  favicon: `${baseUrl}/favicon.ico`,
 }
 
 // 所有配置项，详见文档: https://theme.sugarat.top/
@@ -76,7 +78,7 @@ const blogTheme = getThemeConfig({
   //     { type: 'text', content: '👇QQ👇---👇 微信 👇' },
   //     {
   //       type: 'image',
-  //       src: 'https://pic.clannad.me/blog/qrcode.png'
+  //       src: `https://pic.${DOMAIN}/blog/qrcode.png`
   //     },
   //     {
   //       type: 'text',
