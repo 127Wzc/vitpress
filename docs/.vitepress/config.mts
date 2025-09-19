@@ -110,6 +110,13 @@ export default defineConfig({
         async: true         // 异步加载脚本
       })
       // ... 其他 Vite 插件 ...
-    ]
+    ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `$domain: "${process.env.VITE_DOMAIN || 'clannad.me'}";`
+        }
+      }
+    }
   }
 });
