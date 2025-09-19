@@ -1,4 +1,6 @@
 ---
+isTimeLine: true
+date: 2025-09-19
 title: 'Prompt 模板'
 description: '收集各种场景下的实用Prompt模板，包括通用模板、专业领域模板和优化技巧模板'
 cover: false

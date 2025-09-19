@@ -1,4 +1,6 @@
 ---
+isTimeLine: true
+date: 2025-09-19
 title: '基础与技巧'
 description: '保留关键基本概念与高频实用技巧，快速上手且可直接复用'
 cover: false

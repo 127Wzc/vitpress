@@ -1,9 +1,8 @@
 ---
-hidden: true
+publish: false
 readingTime: false
 date: false
 author: false
-recommend: false
 ---
 
 # Prompt 工程
@@ -12,10 +11,10 @@ Prompt工程是AI时代的重要技能，通过精心设计的提示词来引导
 
 ## 主要内容
 
-- [基础与技巧](/ai/prompt/basics/) - 关键基本概念 + 高频实用技巧
-- [优化与案例](/ai/prompt/optimization/) - 优化思路结合代表性案例
-- [Prompt模板](/ai/prompt/templates/) - 常用场景的提示词模板
-- [Prompt个人收藏](/ai/prompt/collect) - 个人收藏提示词
+- [基础与技巧](./basics.md) - 关键基本概念 + 高频实用技巧
+- [优化与案例](./optimization.md) - 优化思路结合代表性案例
+- [Prompt模板](./templates.md) - 常用场景的提示词模板
+- [Prompt个人收藏](./collect.md) - 个人收藏提示词
 
 ## 推荐工具
 
@@ -26,7 +25,6 @@ Prompt工程是AI时代的重要技能，通过精心设计的提示词来引导
 
 ## 学习资源
 
-- [OpenAI Prompt Engineering Guide](https://platform.openai.com/docs/guides/prompt-engineering)
 - [Anthropic Claude Documentation](https://docs.anthropic.com/)
 - [Prompt Engineering Institute](https://www.promptinginstitute.com/)
 

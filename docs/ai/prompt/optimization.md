@@ -1,4 +1,6 @@
 ---
+isTimeLine: true
+date: 2025-09-19
 title: '优化与案例'
 description: '将优化思路与真实案例合并展示，直接用示例说明如何改进'
 cover: false

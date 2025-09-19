@@ -1,4 +1,6 @@
 ---
+isTimeLine: true
+date: 2025-09-19
 title: 'Prompt 个人收藏'
 description: '常用、高效的提示词收藏夹：按场景分类，卡片化呈现，随取随用'
 cover: false
