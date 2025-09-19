@@ -349,4 +349,4 @@ API信息：[详情]
 
 ---
 
-*下一节：[模板大全](/ai/prompt/templates/)*
+*下一节：[Prompt模板](./templates.md)*

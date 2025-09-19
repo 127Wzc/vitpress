@@ -120,4 +120,4 @@ Prompt（提示词）是给AI的任务指令与约束集合。好的Prompt能显
 
 ---
 
-*下一节：[模板大全](/ai/prompt/templates/)*
+*下一节：[优化与案例](./optimization.md)*
