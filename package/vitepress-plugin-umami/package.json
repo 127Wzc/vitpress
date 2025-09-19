@@ -32,7 +32,7 @@
     "vitepress": "^1.6.3"
   },
   "scripts": {
-    "dev": "npx tsup src/index.ts --dts --watch --format esm,cjs --external vitepress",
-    "build": "npx tsup src/index.ts --dts --format esm,cjs --external vitepress --silent"
+    "dev": "tsup src/index.ts --dts --watch --format esm,cjs --external vitepress",
+    "build": "tsup src/index.ts --dts --format esm,cjs --external vitepress --silent"
   }
 } 

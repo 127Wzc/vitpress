@@ -1,0 +1,5 @@
+{
+  "buildCommand": "vitepress build docs",
+  "outputDirectory": "docs/.vitepress/dist",
+  "installCommand": "pnpm install --no-frozen-lockfile && cd package/vitepress-plugin-umami && pnpm add tsup -D && pnpm build && cd ../.."
+}
