@@ -83,7 +83,7 @@ export default defineConfig({
         text: "个人服务", 
         items: [
           { text: "个人图床", link: `https://imgbed.${DOMAIN}` },
-          { text: "临时邮箱", link: `https://mail-web.${DOMAIN}` },
+          { text: "临时邮箱", link: `https://mail.${DOMAIN}` },
           { text: "表情包制作文档", link: `https://meme.${DOMAIN}/docs` },
           { text: "服务监控面板", link: `https://uk.${DOMAIN}/status/web` }
         ]
