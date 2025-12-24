@@ -4,3 +4,4 @@ cache
 .temp
 .DS_Store
 .vscode
+*.timestamp-*.mjs

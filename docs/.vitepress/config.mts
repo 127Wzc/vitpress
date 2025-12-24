@@ -2,9 +2,8 @@ import { defineConfig } from "vitepress";
 import { UmamiPlugin } from 'vitepress-plugin-umami'
 // 导入主题的配置
 import { blogTheme } from "./blog-theme";
-
-// 域名环境变量
-const DOMAIN = process.env.VITE_DOMAIN || '559558.xyz';
+// 导入统一站点配置
+import { DOMAIN, SERVICES, scssVariables, markdownReplacements } from "./site.config";
 
 // 如果使用 GitHub/Gitee Pages 等公共平台部署
 // 通常需要修改 base 路径，通常为"/仓库名/"
@@ -23,6 +22,19 @@ export default defineConfig({
   title: "小c",
   description: "基于粥里有勺糖的博客主题，基于 vitepress 实现",
   lastUpdated: true,
+  // Markdown 配置 - 支持占位符替换（配置来自 site.config.ts）
+  markdown: {
+    config: (md) => {
+      const originalRender = md.render.bind(md);
+      md.render = (src, env) => {
+        // 应用所有替换规则
+        for (const [pattern, replacement] of markdownReplacements) {
+          src = src.replace(pattern, replacement);
+        }
+        return originalRender(src, env);
+      };
+    }
+  },
   // 详见：https://vitepress.dev/zh/reference/site-config#head
   head: [
     // 配置网站的图标（显示在浏览器的 tab 上）
@@ -48,48 +60,52 @@ export default defineConfig({
     //   text: '去 GitHub 上编辑内容'
     // },
     nav: [
-      { text: "首页",
-        link: "/" 
+      {
+        text: "首页",
+        link: "/"
       },
-      { 
-        text: "编程", 
+      {
+        text: "编程",
         items: [
           { text: "Java", link: "/coding/java/" },
           { text: "Shell", link: "/coding/shell/" },
         ]
       },
-      { 
-        text: "人工智能", 
+      {
+        text: "人工智能",
         items: [
-          { text: "AI提示词", link: "/ai/prompt/" }
+          { text: "AI提示词", link: "/ai/prompt/" },
+          { text: "AI Debug记录", link: "/ai/debug/" }
         ]
       },
-      { 
-        text: "数据库", 
+      {
+        text: "数据库",
         items: [
           { text: "MySql", link: "/db/mysql/" },
           { text: "PostgreSQL", link: "/db/postgresql/" }
         ]
       },
-      { 
-        text: "运维工具", 
+      {
+        text: "运维工具",
         items: [
           { text: "Docker", link: "/ops/docker/" },
           { text: "Git", link: "/ops/git/" },
           { text: "Linux", link: "/ops/linux/" },
         ]
       },
-      { 
-        text: "个人服务", 
+      {
+        text: "个人服务",
         items: [
-          { text: "个人图床", link: `https://imgbed.${DOMAIN}` },
-          { text: "临时邮箱", link: `https://mail.${DOMAIN}` },
-          { text: "表情包制作文档", link: `https://meme.${DOMAIN}/docs` },
-          { text: "服务监控面板", link: `https://uk.${DOMAIN}/status/web` }
+          { text: "个人图床", link: SERVICES.imgbed },
+          { text: "个人标签图床", link: SERVICES.imgTagbed },
+          { text: "临时邮箱", link: SERVICES.mail },
+          { text: "表情包制作文档", link: SERVICES.meme },
+          { text: "服务监控面板", link: SERVICES.status }
         ]
       },
-      { text: "关于主题", 
-        link: "/about" 
+      {
+        text: "关于主题",
+        link: "/about"
       }
     ],
     socialLinks: [
@@ -104,7 +120,7 @@ export default defineConfig({
       UmamiPlugin({
         websiteId: process.env.VITE_UMAMI_WEBSITE_ID || '', // 替换为您的 Umami 网站 ID
         hostUrl: process.env.VITE_UMAMI_HOST_URL || '', // 替换为您的 Umami 网站js
-        
+
         // 可选配置
         apply: 'all',        // 在开发和构建环境都启用
         async: true         // 异步加载脚本
@@ -114,7 +130,8 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `$domain: "${process.env.VITE_DOMAIN || 'clannad.me'}";`
+          // SCSS 变量注入（配置来自 site.config.ts）
+          additionalData: scssVariables
         }
       }
     }
