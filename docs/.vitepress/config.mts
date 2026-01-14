@@ -94,6 +94,12 @@ export default defineConfig({
         ]
       },
       {
+        text: "调试工具",
+        items: [
+          { text: "小程序逆向", link: "/debug/miniprogram/" }
+        ]
+      },
+      {
         text: "个人服务",
         items: [
           { text: "个人图床", link: SERVICES.imgbed },
