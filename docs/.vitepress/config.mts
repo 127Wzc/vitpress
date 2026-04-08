@@ -96,6 +96,7 @@ export default defineConfig({
       {
         text: "调试工具",
         items: [
+          { text: "Android 逆向", link: "/debug/android/" },
           { text: "小程序逆向", link: "/debug/miniprogram/" }
         ]
       },
