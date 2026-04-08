@@ -8,9 +8,9 @@ import type { Theme } from '@sugarat/theme'
 const DOMAIN = process.env.VITE_DOMAIN || 'clannad.me';
 const baseUrl = `https://blog.${DOMAIN}`
 const RSS: Theme.RSSOptions = {
-  title: '小c',
+  title: 'Warden·Cusp',
   baseUrl,
-  copyright: 'Copyright (c) 2024-present, 小c',
+  copyright: 'Copyright (c) 2024-present, Warden·Cusp',
   description: '君子终日乾乾，夕惕若厉，无咎',
   language: 'zh-cn',
   image: `${baseUrl}/logo.png`,
@@ -30,7 +30,7 @@ const blogTheme = getThemeConfig({
   footer: {
     // message 字段支持配置为HTML内容，配置多条可以配置为数组
     // message: '下面 的内容和图标都是可以修改的噢（当然本条内容也是可以隐藏的）',
-    copyright: 'MIT License | 小c',
+    copyright: 'MIT License | Warden·Cusp',
     // icpRecord: {
     //   name: '蜀ICP备19011724号',
     //   link: 'https://beian.miit.gov.cn/'
@@ -45,7 +45,7 @@ const blogTheme = getThemeConfig({
   themeColor: 'el-blue',
 
   // 文章默认作者
-  author: '小c',
+  author: 'Warden·Cusp',
   // Mermaid - 图表
   mermaid: true,
   //日期

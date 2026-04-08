@@ -2,7 +2,7 @@
 isTimeLine: true
 title: AI Debug实录:OpenList + RustFS 上传cors,403
 description: 解决 OpenList 链接 RustFS S3 端点后无法上传文件的问题，涉及 Nginx 反代配置
-author: 小c
+author: Warden·Cusp
 date: 2025-12-25
 tag:
   - RustFS

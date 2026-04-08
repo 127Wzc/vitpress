@@ -19,7 +19,7 @@ export default defineConfig({
   extends: blogTheme,
   // base,
   lang: "zh-cn",
-  title: "小c",
+  title: "Warden·Cusp",
   description: "基于粥里有勺糖的博客主题，基于 vitepress 实现",
   lastUpdated: true,
   // Markdown 配置 - 支持占位符替换（配置来自 site.config.ts）
