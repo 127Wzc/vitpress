@@ -91,6 +91,7 @@ export default defineConfig({
           { text: "Docker", link: "/ops/docker/" },
           { text: "Git", link: "/ops/git/" },
           { text: "Linux", link: "/ops/linux/" },
+          { text: "Node", link: "/ops/node/" },
         ]
       },
       {
