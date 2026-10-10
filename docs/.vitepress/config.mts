@@ -75,6 +75,7 @@ export default defineConfig({
         text: "人工智能",
         items: [
           { text: "AI提示词", link: "/ai/prompt/" },
+          { text: "Rag", link: "/ai/rag/" },
           { text: "AI Debug记录", link: "/ai/debug/" }
         ]
       },
